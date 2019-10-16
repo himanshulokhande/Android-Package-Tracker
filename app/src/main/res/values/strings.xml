@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">FedEx Package Tracker</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_msg">Welcome to FedEx</string>
+    <string-array name="cities_array">
+        <item>Northborough, MA</item>
+        <item>Edison, NJ</item>
+        <item>Pittsburgh, PA</item>
+        <item>Allentown, PABD Strap Endlinksth</item>
+        <item>Martinsburg, WV</item>
+        <item>Charlotte, NC</item>
+        <item>Atlanta, GA</item>
+        <item>Orlando, FL</item>
+        <item>Memphis, TN</item>
+        <item>Grove City, OH</item>
+        <item>Indianapolis, IN</item>
+        <item>Detroit, MI</item>
+        <item>New Berlin, WI</item>
+        <item>Minneapolis, MN</item>
+        <item>St. Louis, MO</item>
+        <item>Kansas, KS</item>
+        <item>Dallas, TX</item>
+        <item>Houston, TX</item>
+        <item>Denver, CO</item>
+        <item>Salt Lake City, UT</item>
+        <item>Phoenix, AZ</item>
+        <item>Los Angeles, CA</item>
+        <item>Chino, CA</item>
+        <item>Sacramento, CA</item>
+        <item>Seattle, WA</item>
+    </string-array>
+    <string-array name="package_array">
+        <item>Package</item>
+        <item>Letter</item>
+    </string-array>
+</resources>

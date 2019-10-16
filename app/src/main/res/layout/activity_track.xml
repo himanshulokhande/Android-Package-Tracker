@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrackActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <TextView
+            android:id="@+id/cLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Comment"
+            app:layout_constraintEnd_toEndOf="@+id/qLabel"
+            app:layout_constraintTop_toBottomOf="@+id/pLabel" />
+
+        <TextView
+            android:id="@+id/pText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/qText"
+            app:layout_constraintTop_toBottomOf="@+id/wText" />
+
+        <EditText
+            android:id="@+id/trackPackageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="Enter Tracking Number"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/trackPackageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:text="Track"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Sender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trackPackageText" />
+
+        <TextView
+            android:id="@+id/sNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/sNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/trackPackageText" />
+
+        <TextView
+            android:id="@+id/rNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Receiver"
+            app:layout_constraintStart_toStartOf="@+id/sNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/sNameLabel" />
+
+        <TextView
+            android:id="@+id/rNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/sNameText"
+            app:layout_constraintTop_toBottomOf="@+id/sNameText" />
+
+        <TextView
+            android:id="@+id/sLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Source"
+            app:layout_constraintStart_toStartOf="@+id/sNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/rNameLabel" />
+
+        <TextView
+            android:id="@+id/sText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/sNameText"
+            app:layout_constraintTop_toBottomOf="@+id/rNameText" />
+
+        <TextView
+            android:id="@+id/dLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Destination"
+            app:layout_constraintStart_toStartOf="@+id/sNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/sLabel" />
+
+        <TextView
+            android:id="@+id/dText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/sNameText"
+            app:layout_constraintTop_toBottomOf="@+id/sText" />
+
+        <TextView
+            android:id="@+id/qLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginRight="135dp"
+            android:text="Quantity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trackPackageText" />
+
+        <TextView
+            android:id="@+id/qText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/qLabel"
+            app:layout_constraintTop_toBottomOf="@+id/trackPackageText" />
+
+        <TextView
+            android:id="@+id/wLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Weight (kgs)"
+            app:layout_constraintEnd_toEndOf="@+id/qLabel"
+            app:layout_constraintTop_toBottomOf="@+id/qLabel" />
+
+        <TextView
+            android:id="@+id/wText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/qText"
+            app:layout_constraintTop_toBottomOf="@+id/qText" />
+
+        <TextView
+            android:id="@+id/pLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Package Type"
+            app:layout_constraintEnd_toEndOf="@+id/qLabel"
+            app:layout_constraintTop_toBottomOf="@+id/wLabel" />
+
+        <TextView
+            android:id="@+id/cText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/qText"
+            app:layout_constraintTop_toBottomOf="@+id/pText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/track_List"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="160dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trackPackageText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

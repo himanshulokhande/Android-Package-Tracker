@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_msg"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:fontFamily="sans-serif-black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009" />
+
+    <TextView
+        android:id="@+id/senderNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Sender Name"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText" />
+
+    <EditText
+        android:id="@+id/sNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText" />
+
+    <TextView
+        android:id="@+id/receiverNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Receiver Name"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="@+id/senderNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/senderNameLabel" />
+
+    <EditText
+        android:id="@+id/receiverNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/sNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/sNameLabel" />
+
+    <TextView
+        android:id="@+id/sourceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Source"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="@+id/senderNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/receiverNameLabel" />
+
+    <TextView
+        android:id="@+id/destinationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Destination"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="@+id/senderNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/sourceLabel" />
+
+    <TextView
+        android:id="@+id/packageTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Package Type"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="@+id/senderNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/destinationLabel" />
+
+    <TextView
+        android:id="@+id/weightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Weight (kgs)"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="@+id/senderNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/packageTypeLabel" />
+
+    <TextView
+        android:id="@+id/quantityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Quantity"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="@+id/senderNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/weightLabel" />
+
+    <TextView
+        android:id="@+id/signatureRequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Direct Signature Required"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="@+id/senderNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/quantityLabel" />
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Comments"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="@+id/senderNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/signatureRequired" />
+
+    <Spinner
+        android:id="@+id/srcSpinner"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="212dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="12dp"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/cities_array"
+        app:layout_constraintStart_toStartOf="@+id/sNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/receiverNameText" />
+
+    <Spinner
+        android:id="@+id/destSpinner"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="213dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="20dp"
+        android:entries="@array/cities_array"
+        app:layout_constraintStart_toStartOf="@+id/sNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/srcSpinner" />
+
+    <Spinner
+        android:id="@+id/packageTypeSpinner"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="213dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:entries="@array/package_array"
+        app:layout_constraintStart_toStartOf="@+id/sNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/destSpinner" />
+
+    <EditText
+        android:id="@+id/weightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/sNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/packageTypeSpinner" />
+
+    <EditText
+        android:id="@+id/quantityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/sNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/weightText" />
+
+    <Switch
+        android:id="@+id/main_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/sNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/quantityText" />
+
+    <EditText
+        android:id="@+id/commentsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/sNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/main_switch" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="10dp"
+        android:text="Reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentsText" />
+
+    <Button
+        android:id="@+id/create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        android:text="Create"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentsText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
